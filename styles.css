@@ -19,16 +19,19 @@
     #field {
         width: 50%;
         margin: 0 auto;
+        padding-left: 10%;
+        
         
     }
     form  {
     width: 70%;
     margin: 0 auto;
-    background-color: #ededed;
+    background: url(assets/bg.png);
     border-style: solid;
     border-color: #707070;
     border-bottom-color: transparent;
     border-width: 1px;
+    max-width: 800px;
     }
     
     .box {
@@ -37,9 +40,7 @@
     }
 
     hr {
-        border: 0;
-        border-bottom: 1px dashed #ccc;
-        background: #999;
+      float: top;
     
     }
    
@@ -59,21 +60,32 @@
 
    #buttonArea {
        margin: 0 auto;
-       padding-bottom: 30px;
-       padding-top: 10px;
+       padding-bottom: 28px;
+       padding-top: 30px;
        width: 300px;
-       background-color: #EDEDED;
+       
        
        
 
    }
 /*Form Styling Modifications*/
-  .row {
+.space {
     display: table-row;
-    width: 70px;
+    min-height: 1px;
+    width: 100%;
+    
+}  
+
+.row {
+    display: table-row;
+    width: 100%;
+    border-bottom:1pt solid black;
     }
     
-   
+   #space{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+   }
 .tireSize {
     width: 60px;
     }
@@ -87,6 +99,7 @@
         padding: 20px;
         width: 70%;
         margin: 0 auto;
+        max-width: 800px;
     }
     label {
     display: table-cell;
@@ -112,32 +125,48 @@
     
     }
     /*End Form Styling*/
+    
+    #polygon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
     #results {
-        padding-top: 30px;
+        
         background-color: #ffffff;
-        width: 70%;
-        margin: 0 auto;
         border-style: solid;
         border-color: #707070;
-        border-top-color: transparent;
+        border-top-color: #ededed;
         border-top-color: none;
         border-width: 1px;
-        padding-left: 20%;
-        padding-right: 15%;
         padding-bottom: 30px; 
+        max-width: 800px;
+        margin: auto;
        
         
     }
     
     #resultsLabel {
+        padding-top: 20px;
         font-weight: bold;
         font-size: 20px;
         color: #707070;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .resultField {
-        width: 150%;
+    #resultsFields {
+        margin: 0 auto;
+        width: 50%;
+        
+        
     }
+
+   
+
+  
    
     
     #triangle {
@@ -167,9 +196,10 @@
     
 
   
-    @media only screen and (max-width: 821px) {
+    @media only screen and (max-width: 599px) {
     #field {
-    width: 70%;
+    width: 80%;
+    padding-left: 30px;
     
         }
     
@@ -178,53 +208,77 @@
     
     }
     #topBox {
-        width: 70%;
+        width: 100%;
     }
     form {
-        width: 70%
+        width: 100%;
+        background-image: url("assets/bgMobile.png");
+        background-repeat: no-repeat;
+    }
+    #buttonArea {
+        width: 70%;
+    }
+    #results {
+        width: 100%;
+        padding-left: 30px;
     }
 }
 
-    @media only screen and (min-width: 1295px) {
+    @media only screen and (min-width: 600px) and (max-width: 1295px) {
+        h1 {
+            text-align: center;
+        }
+        
         #field {
-            width: 70%;
-            padding-left: 10%;
+            width: 80%;
+            
         }
         
         form {
-            width:800px;
+            width:850px;
             margin: 0 auto;
             
         }
         #topBox {
-            width: 800px;
+            width: 850px;;
         }
         label {
             padding-left: 2%;
         }
         #results {
-            width: 800px;
+            width: 1702px;
+            
+            
+        }
+        #resultsFields {
+            padding-left: 10%;
         }
     }
 
-    @media only screen and (min-width: 1296px) and (max-width: 1181px) {
+    @media only screen and (min-width: 1296px) {
         #field {
             width: 80%;
-            padding-left: 10%;
+            
         }
         
         form {
-            width:800px;
-            margin: 0 auto;
+            width:850px;
+        
+            
             
         }
         #topBox {
-            width: 800px;
+            max-width: 800px;
+        }
+        
+        
+        #resultsFields {
+           text-align: center;
+        }
+        .resultField {
+            width: 200px;
         }
         label {
             padding-left: 2%;
-        }
-        #results {
-            width: 800px;
         }
     }
