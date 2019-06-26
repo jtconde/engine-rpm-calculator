@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<!--TODO
-1. Finish Layout xx
-2. Responsive Check xx
-3. Clean CSS / HTML
-4. Edit Field Options xx
--->
+
 <html>
   
   <head>
-    
+  
     <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
   <title>
@@ -30,17 +25,15 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat nunc ac nisl porttitor porta. Donec tristique ultrices ornare. Mauris feugiat nec lacus a vestibulum.
   </p>
   </div>
+  <!--Form Start-->
   <form>
     <div id=field>
-     <!--Row Start-->
       <div class="row">
-        
-      <label for="First Name">
+        <label for="First Name">
           Year:
-         
-        </label>
+         </label>
         
-        <select>
+         <select>
           <option value="blank"></option>
           <option value="2020">2020</option>
           <option value="2019">2019</option>
@@ -84,14 +77,11 @@
           <option value="1981">1981</option>
           <option value="1980">1980</option>
           <option value="1979">1979</option>
-
-
         </select>
         </div>
         
-       <!--End-->
         <div class="row">
-        <label for="email">
+        <label>
           Trim:
         </label>
         <select>
@@ -108,7 +98,7 @@
       
       
        <div class="row"> 
-        <label for="website">
+        <label>
           Transmission:
         </label>
         
@@ -121,7 +111,7 @@
       
       
         <div class="row">
-        <label for="pass">
+        <label>
           Transmission Gear:
         </label>
         
@@ -135,42 +125,39 @@
       </div>
       
         <div class="row">
-        <label for="pass">
+        <label>
           Transmission Gear Ratio:
         </label>
-        
-        <input id="transGearRatio" type="text" name="firstname"><br>
+        <input id="transGearRatio" type="text"><br>
       </div>
-      
-        <div class="row">
-        <label for="pass">
+      <div class="row">
+        <label>
           Tire Size:
         </label>
-        
-        <input class="tireSize" type="text" name="firstname" placeholder="000" maxlength="3">
+        <input class="tireSize" type="text"  placeholder="000" maxlength="3">
         /
-        <input class="tireSize" type="text" name="firstname" placeholder="00" maxlength="2">
+        <input class="tireSize" type="text"  placeholder="00" maxlength="2">
         -
-        <input class="tireSize" type="text" name="firstname" placeholder="00" maxlength="2"><br>
-      
+        <input class="tireSize" type="text" placeholder="00" maxlength="2"><br>
       </div>
      
-        <div class="row">
-        <label for="pass">
+        
+      <div class="row">
+        <label>
           Speed (mph):
         </label>
-        
-        <input id="transGearRatio" type="text" name="firstname"><br>
+        <input id="transGearRatio" type="text"><br>
       </div>
       
-        <div class="row">
-        <label for="pass">
+        
+      <div class="row">
+        <label>
           Rear Gear Ratio:
         </label>
-        
-        <input id="transGearRatio" type="text" name="firstname"><br>
+        <input id="transGearRatio" type="text"><br>
     </div>
     </div>
+    
     <div id="buttonArea">
         <input id="submit" type="submit" value="Calculate">
       </div>
@@ -183,28 +170,22 @@
     </p>
     <div id="resultsFields">
       <div class="row">
-      <label class="resultText" for="pass">
+      <label class="resultText">
         Tire Diameter:
       </label>
-      
-      <input class="resultField" type="text" name="firstname" placeholder="-" readonly><br>
+      <input class="resultField" type="text"  placeholder="-" readonly><br>
     </div>
-    
     <div class="row">
-      <label class="resultText" for="pass">
+      <label class="resultText">
         RPM:
       </label>
-      
-      <input class=resultField type="text" name="firstname" placeholder="-" readonly><br>
+      <input class=resultField type="text" placeholder="-" readonly><br>
     </div>  
     </div>
     </div>
+    <!--End Results-->
   </div>
 </div>
 </div>
 </body>
- 
-  
-  </body>
-  
-</html>
+ </html>
