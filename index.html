@@ -10,6 +10,7 @@
     Title
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="app.js"></script>
   </head>
   
   <body>
@@ -29,11 +30,11 @@
   <form>
     <div id=field>
       <div class="row">
-        <label for="First Name">
+        <label for="Year">
           Year:
          </label>
         
-         <select>
+         <select id="yearSelect">
           <option value="blank"></option>
           <option value="2020">2020</option>
           <option value="2019">2019</option>
@@ -84,15 +85,15 @@
         <label>
           Trim:
         </label>
-        <select>
+        <select id="trimSelect">
             <option value="blank"></option>
           <option value="GT">GT</option>
           <option value="Bullitt">Bullitt</option>
-          <option value="Boss302">Boss 302</option>
+          <option value="Boss 302">Boss 302</option>
           <option value="V6">V6</option>
           <option value="350">GT350/350R</option>
           <option value="EcoBoost">EcoBoost</option>
-          <option value="GT500">Shelby GT500</option>
+          <option value="Shelby GT500">Shelby GT500</option>
         </select>
       </div>
       
@@ -102,7 +103,7 @@
           Transmission:
         </label>
         
-        <select>
+        <select id="transmissionSelect">
           <option value="blank"></option>
           <option value="auto">Automatic</option>
           <option value="manual">Manual</option>
@@ -115,7 +116,7 @@
           Transmission Gear:
         </label>
         
-        <select style="width: 80px;">
+        <select style="width: 80px;" id="gearSelect">
           <option value="3.15">3.15</option>
           <option value="2.73">2.73</option>
           <option value="3.31">3.31</option>
@@ -159,14 +160,14 @@
     </div>
     
     <div id="buttonArea">
-        <input id="submit" type="submit" value="Calculate">
+        <input onClick="calculate()" id="submit" type="button" value="Calculate">
       </div>
   </form>
  <!--Results-->
   <div id="results">
       <div id="triangle"></div>
     <p id="resultsLabel">
-      Results for {Year} {Vehicle} {Trim}
+      Results
     </p>
     <div id="resultsFields">
       <div class="row">
