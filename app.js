@@ -3,11 +3,12 @@ var trimSelection;
 var transmissionSelection;
 var gearSelection;
 var gearRatio;
-var tireUno;
-var tireDos;
-var tireTres;
+var tWidth;
+var tRatio;
+var tRim;
 var speed;
-var rearRatio
+var rearRatio;
+
 
 function calculate() {
     // User Input
@@ -16,16 +17,23 @@ function calculate() {
     transmissionSelection = document.getElementById("transmissionSelect").value;
     gearSelection = document.getElementById("gearSelect").value;
     gearRatio = document.getElementById("transGearRatio").value;
-    tireUno = document.getElementById("tireOne").value;
-    tireDos = document.getElementById("tireTwo").value;
-    tireTres = document.getElementById("tireThree").value;
+    tWidth = document.getElementById("tireWidth").value;
+    tRatio = document.getElementById("tireRatio").value;
+    tRim = document.getElementById("tireRim").value;
     speed = document.getElementById("speedz").value;
-    rearRatio = tireUno = document.getElementById("rearGearRatio").value;
+    rearRatio = document.getElementById("rearGearRatio").value;
     
+    // Calculate Tire Height
+    var tireHeight = (tWidth)*(tRatio*0.01)/25.4*2+(parseInt(tRim))
+    tireHeight = tireHeight.toFixed(1);
+    
+
     // Update Results Label 
     document.getElementById("resultsLabel").innerHTML = "Results for " + yearSelection + " Mustang " + trimSelection;
+    document.getElementById("diameterBox").value = tireHeight;
+    
     // Log Test Data Line
     console.log(yearSelection + " Mustang " + trimSelection + " -> Transmission: " + transmissionSelection
-        + " -> Gear: " + gearSelection + " -> Gear Ratio: " + gearRatio + " -> Tire Size: " + tireUno + "/" + tireDos + "-" + tireTres
-        + " -> Speed: " + speed + " -> Rear Gear Ratio: " + rearRatio);
+        + " -> Gear: " + gearSelection + " -> Gear Ratio: " + gearRatio + " -> Tire Size: " + tWidth + "/" + tRatio + "-" + tRim
+        + " -> Speed: " + speed + " -> Rear Gear Ratio: " + rearRatio + " " + tireHeight);
 }
