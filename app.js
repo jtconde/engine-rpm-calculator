@@ -7,7 +7,6 @@ var tWidth;
 var tRatio;
 var tRim;
 var speed;
-var rearRatio;
 
 
 function calculate() {
@@ -35,5 +34,5 @@ function calculate() {
     // Log Test Data Line
     console.log(yearSelection + " Mustang " + trimSelection + " -> Transmission: " + transmissionSelection
         + " -> Gear: " + gearSelection + " -> Gear Ratio: " + gearRatio + " -> Tire Size: " + tWidth + "/" + tRatio + "-" + tRim
-        + " -> Speed: " + speed + " -> Rear Gear Ratio: " + rearRatio + " " + tireHeight);
+        + " -> Speed: " + speed + " " + tireHeight);
 }
